@@ -24,3 +24,8 @@ At Cool Cats we write unit tests for 100% coverage and for as many edge cases as
 ## Deployment Script/Task
 
 Please create a deployment script or task. Which ever you feel is most appropriate
+
+>## Notes
+>I have deployed to the ropsten testnet.
+>https://ropsten.etherscan.io/address/0x1929b909f1124b5Ca7457d6a15f574C4BE5d5337#code
+>https://ropsten.etherscan.io/address/0x7124B5c3C9B6a6CAD012C448AAAF624F2E973935#code
