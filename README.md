@@ -6,6 +6,12 @@ We have deliberately made some very silly mistakes and simple things like file n
 ### ERC1155SupplyCC
 
 Why was this file used and not used directly from the OpenZeppling library?
+  > ### Anwser <br>
+  >This is used for tracking the total supply amount for each nft id. The total supply amount is inceased by the amount when minting and decreased when burning. The difference from openzeppelin's extension is to check if the burning amount exceeds the total supply amount. By the way, this checking block is not needed, I think. This checking block is called only when burning, and as you can see at below images, ERC1155's burn function checks if the amount to burn exceeds the frombalance. And of course, the frombalance is equal or small than the total supply since the minting and transferring logic.
+  That's why your checking logic is deprecated, needless, and gas costable operation. So I am using the openzeppelin's extension.
+  ![burn function](./images/erc1155_burn.png)
+  ![batch burn function](./images/erc1155_burn_batch.png)  
+
 
 ### Claim()
 
